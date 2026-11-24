@@ -1,0 +1,160 @@
+
+/* Grundläggande stil för hela webbsidan (bakgrund, mönster och typsnitt) */
+body {
+    max-width: 900px; /* Begränsar sidans totala bredd för bättre läsbarhet */
+    margin: 0 auto; /* Centrerar hela sidan horisontellt */
+    padding: 30px; /* Ger luft runt innehållet */
+    background-color: #fdf6ec; /* Varm bakgrundsfärg som reserv om bilden inte laddas */
+    background-repeat: repeat; /* Upprepar mönstret jämnt över hela bakgrunden */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Lättläst typsnitt för brödtext */
+    color: #333333; /* Mörkgrå textfärg för god kontrast */
+}
+/* 1. Huvudrubrik för sidan (Sju sorters kakor) */
+h1 {
+    font-family: Georgia, 'Times New Roman', serif; /* Klassiskt typsnitt för huvudrubriken */
+    font-size: 42px; /* Stor textstorlek för tydlig hierarki */
+    font-weight: bold; /* Fet text */
+    color: #5c3a21; /* Mörkbrun färg */
+    text-align: center; /* Centrerad rubrik */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #d4a373; /* Dekorativ linje under rubriken */
+    padding-bottom: 10px;
+}
+header p {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/* 2. Underrubriker för sektioner (t.ex. Välkommen och Innehåll) */
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modernt och lättläst typsnitt */
+    font-size: 28px; /* Mellanstor rubrik */
+    font-weight: 600;
+    color: #8b5a2b; /* Varm brun färg */
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* 3. Rubriker för de olika kaksorterna (t.ex. Drömmar och Finska pinnar) */
+h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px; /* Mindre än h2 men tydligt skild från brödtexten */
+    font-weight: bold;
+    color: #a47148; /* Ljusare karamellbrun färg */
+    margin-top: 25px;
+    margin-bottom: 8px;
+    background-image: url("ikoner .jpeg"); /* Lägger till ikonen via stilmallen */
+    background-repeat: no-repeat;         /* Visar ikonen bara en gång */
+    background-size: 28px 34px;           /* Ger ikonen en fin och tydlig storlek */
+    background-position: left center;     /* Placerar ikonen till vänster om rubriken */
+    padding-left: 38px;                   /* Skapar luft mellan ikonen och texten */
+}
+/* Bilder - Gör bilderna responsiva, runda och enhetliga */
+img {
+    width: 280px; /* Gör bilderna mindre och lagom stora på datorn */
+    max-width: 100%; /* Gör att bilden aldrig blir bredare än skärmen */
+    height: 280px; /* Ger alla bilder samma höjd så de blir helt runda */
+    object-fit: cover; /* Gör att bilden fyller cirkeln utan att bli utdragen */
+    border-radius: 50%; /* Gör bilderna helt runda */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Lätt skugga som lyfter fram bilden */
+    margin-top: 15px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* Liten effekt när man håller muspekaren över bilden */
+img:hover {
+    transform: scale(1.03); /* Förstorar bilden lite grann */
+    transition: transform 0.3s ease; /* Mjuk övergång */
+}
+
+/* 4. Underrubrik för ingredienser med egen ikon via CSS */
+h4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #8b5a2b;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    background-image: url("ikoneri.jpg"); /* Lägger till den andra ikonen via CSS */
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: left center;
+    padding-left: 32px;
+}
+/* 9. Huvudmeny / Navigering - Utformad som en tydlig meny */
+nav {
+    background-color: #f3e5d0; /* Mjuk bakgrundsfärg som ramar in menyn */
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #d4a373;
+}
+
+nav ul {
+    list-style-type: none; /* Tar bort de svarta punkterna */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Placerar menyalternativen bredvid varandra */
+    flex-direction:column; /* Gör att knapparna bryts snyggt till nästa rad vid behov */
+    gap: 10px; /* Mellanrum mellan knapparna */
+    max-width: 100%;
+}
+
+nav li a {
+    display: inline-block;
+    background-color: #8b5a2b; /* Varm brun knappfärg */
+    color: #ffffff; /* Vit text för tydlig kontrast */
+    padding: 8px 15px;
+    border-radius: 20px; /* Rundade knappar */
+    text-decoration: none; /* Tar bort understrykningen */
+    font-size: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Mjuk färgövergång */
+}
+
+/* Effekt när man för muspekaren över ett menyalternativ */
+nav li a:hover {
+    background-color: #5c3a21; /* Mörkare brun vid hover */
+    color: #ffffff;
+    text-decoration: none;
+}
+/* 10. Sidhuvud (header) - Stilsatt HTML-element som tydligt framträder */
+header {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+    border-top: 6px solid #8b5a2b; /* Tydlig dekorativ kant upptill */
+}
+
+/* 11. Dekorativ bakgrundsbild/mönster via CSS (ej i HTML-filen) */
+body {
+    background-image: radial-gradient(#d4a373 1px, transparent 1px);
+    background-size: 20px 20px; /* Skapar ett diskret prickmönster i bakgrunden */
+}
+
+/* 12. Sidfot (footer) - Tydlig avslutning på sidan */
+footer {
+    background-color: #5c3a21;
+    color: #fdf6ec;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* Gör länken i sidfoten ljus och tydlig mot den mörka bakgrunden */
+footer a {
+    color: #fdf6ec;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #d4a373;
+}
